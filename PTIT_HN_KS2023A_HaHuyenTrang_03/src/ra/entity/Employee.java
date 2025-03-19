@@ -106,10 +106,13 @@ public class Employee implements IApp {
     }
     @Override
     public void displayData() {
-        System.out.println("Id nhân viên: " + employeeId+"tên: "+employeeName+" ngày sinh: "+birthday+" giới tính(true- nữ, false-nam):  "+sex +" số đt: "+phoneNumber+ "tổng lương: "+totalSalarys(coefficient,allowanceSalary)+" trạng thái: "+status);
+        System.out.println("Id nhân viên: " + employeeId+"tên: "+employeeName+" ngày sinh: "+birthday+" giới tính:  "+sexemlp(sex) +" số đt: "+phoneNumber+ "tổng lương: "+totalSalarys(coefficient,allowanceSalary)+" trạng thái: "+status);
     }
     public static float totalSalarys (float coefficient,int allowanceSalary) {
         float totalSalary = BASE_SALARY * coefficient + allowanceSalary;
         return totalSalary;
+    }
+    public String sexemlp(boolean sex){
+        return sex ?"nam":"nữ";
     }
 }
